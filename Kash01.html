@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kashveen The Ultimate Hero Guy</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    line-height:1.6;
+    background:#f4f4f4;
+    color:#333;
+}
+
+header{
+    background:#222;
+    color:white;
+    padding:20px;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    cursor:pointer;
+}
+
+nav a:hover{
+    color:lime;
+}
+
+.page{
+    display:none;
+}
+
+.page.active{
+    display:block;
+}
+
+.hero{
+    height:300px;
+    background:linear-gradient(to right,#1d5207,#53ff00);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:3rem;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    padding:40px 0;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 5px rgba(0,0,0,.1);
+}
+
+button{
+    margin-top:15px;
+    padding:10px 20px;
+    border:none;
+    background:#222;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#444;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+
+<nav>
+
+<h2>Kashveen The Ultimate Hero Guy</h2>
+
+<ul>
+<li><a onclick="showPage('home')">Home</a></li>
+<li><a onclick="showPage('about')">About Me</a></li>
+<li><a onclick="showPage('ambition')">Ambition</a></li>
+<li><a onclick="showPage('reason')">Reason</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+<!-- HOME -->
+<div id="home" class="page active">
+
+<section class="hero">
+
+<div>
+
+<h1>Hi! I'm Kash Bro!</h1>
+
+<p>This is a simple About Me website.</p>
+
+<button onclick="showMessage()">Get Started</button>
+
+</div>
+
+</section>
+
+<section class="container">
+
+<h2 style="margin-bottom:20px;">Features</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Fast</h3>
+<p>Lightweight and quick-loading design.</p>
+</div>
+
+<div class="card">
+<h3>Responsive</h3>
+<p>Works well on desktop and mobile devices.</p>
+</div>
+
+<div class="card">
+<h3>Easy to Edit</h3>
+<p>Clean HTML, CSS and JavaScript structure.</p>
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="page">
+
+<section class="container">
+
+<h1>About Me</h1>
+
+<p>
+Hello! My name is Kashveen. I enjoy learning new skills, exploring technology,
+and creating simple websites. I always try to improve myself and learn something new every day.
+</p>
+
+</section>
+
+</div>
+
+<!-- AMBITION -->
+<div id="ambition" class="page">
+
+<section class="container">
+
+<h1>My Ambition</h1>
+
+<p>
+My ambition is to become a successful professional who can inspire others and
+continue learning throughout my career.
+</p>
+
+<p>
+I believe hard work, dedication, and consistency are the keys to success.
+</p>
+
+</section>
+
+</div>
+
+<!-- REASON -->
+<div id="reason" class="page">
+
+<section class="container">
+
+<h1>Reason</h1>
+
+<p>
+I created this website as part of my learning journey in HTML, CSS and JavaScript.
+</p>
+
+<p>
+It demonstrates a simple multi-page navigation using only one HTML file.
+</p>
+
+</section>
+
+</div>
+
+<footer>
+
+<p>© 2026 MySite. All rights reserved.</p>
+
+</footer>
+
+<script>
+
+function showMessage(){
+    alert("Welcome to the website!");
+}
+
+function showPage(page){
+
+    let pages=document.querySelectorAll(".page");
+
+    pages.forEach(function(item){
+        item.classList.remove("active");
+    });
+
+    document.getElementById(page).classList.add("active");
+}
+
+</script>
+
+</body>
+</html>
