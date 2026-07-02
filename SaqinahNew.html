@@ -3,114 +3,180 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Saqinah's Website</title>
+<title>Saqinah's Personal Website</title>
 
 <style>
-    *{
-        margin:0;
-        padding:0;
-        box-sizing:border-box;
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    body{
-        font-family: Arial, sans-serif;
-        background-color:#a0e2e2;
-        line-height:1.6;
-    }
+body{
+    font-family:Arial, sans-serif;
+    background:#a0e2e2;
+}
 
-    nav{
-        background-color:#51db5d;
-        padding:15px;
-        text-align:center;
-        position:sticky;
-        top:0;
-    }
+nav{
+    background:#51db5d;
+    padding:15px;
+    text-align:center;
+}
 
-    nav a{
-        color:white;
-        text-decoration:none;
-        margin:0 15px;
-        font-weight:bold;
-        font-size:18px;
-    }
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 20px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
 
-    nav a:hover{
-        text-decoration:underline;
-    }
+nav a:hover{
+    text-decoration:underline;
+}
 
-    section{
-        background:white;
-        max-width:800px;
-        margin:30px auto;
-        padding:30px;
-        border-radius:10px;
-        box-shadow:0 2px 8px rgba(0,0,0,0.2);
-    }
+.page{
+    display:none;
+    background:white;
+    width:80%;
+    max-width:850px;
+    margin:40px auto;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.2);
+}
 
-    h1,h2{
-        color:#000000;
-        margin-bottom:15px;
-    }
+.page.active{
+    display:block;
+}
 
-    p{
-        color:#000000;
-    }
+h1,h2{
+    margin-bottom:15px;
+}
 
-    footer{
-        text-align:center;
-        color:rgb(247, 11, 11);
-        padding:20px;
-    }
+p{
+    margin-bottom:15px;
+    line-height:1.7;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    color:red;
+}
 </style>
 </head>
+
 <body>
 
 <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About Me</a>
-    <a href="#ambition">My Ambition</a>
-    <a href="#contact">Contact</a>
+    <a onclick="showPage('home')">Home</a>
+    <a onclick="showPage('about')">About Me</a>
+    <a onclick="showPage('ambition')">My Ambition</a>
+    <a onclick="showPage('contact')">Contact</a>
 </nav>
 
-<section id="home">
+<!-- HOME -->
+<div id="home" class="page active">
     <h1>Welcome to My Website</h1>
-    <p>
-        Hello! My name is Saqinah. Welcome to my personal website.
-        Here you can learn more about me, my ambition, and how to contact me.
-    </p>
-</section>
 
-<section id="about">
+    <p>
+        Hello! My name is <strong>Saqinah</strong>. Welcome to my personal website.
+        This website shares information about myself, my ambition, and how you can contact me.
+    </p>
+
+    <p>
+        Thank you for visiting my website. I hope you enjoy learning more about me.
+    </p>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="page">
     <h2>About Me</h2>
-    <p>
-        Hi, I'm Saqinah. I am a student who enjoys learning new things and improving my skills.
-        I believe that education and hard work are important for achieving success in life.
-    </p>
-</section>
 
-<section id="ambition">
+    <p>
+        Hi, I'm Saqinah. I am a student who enjoys learning new things and improving my knowledge.
+        I believe that education is the key to success and I always try my best to become a better person every day.
+    </p>
+
+    <p>
+        During my free time, I enjoy reading books, spending time with my family and friends,
+        and learning new skills that can help me achieve my goals.
+    </p>
+</div>
+
+<!-- AMBITION -->
+<div id="ambition" class="page">
     <h2>My Ambition</h2>
+
     <p>
         My ambition is to become a successful teacher who can make a positive impact on society.
-        I am working hard to improve my knowledge, communication skills, and confidence.
+        I want to inspire students to love learning and help them reach their full potential.
     </p>
 
     <p>
-        Through dedication and perseverance, I hope to inspire others and help students achieve
-        their goals. I believe that teaching is a meaningful profession that can shape the future.
+        To achieve this dream, I continue to improve my communication skills, confidence,
+        and teaching abilities. I believe that hard work, patience, and dedication will help
+        me become an excellent educator.
     </p>
-</section>
 
-<section id="contact">
+    <p>
+        Teaching is more than just a profession. It is an opportunity to shape the future by
+        guiding and encouraging the next generation.
+    </p>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="page">
     <h2>Contact Me</h2>
+
     <p><strong>Name:</strong> Saqinah</p>
     <p><strong>Email:</strong> saqinah@example.com</p>
     <p><strong>Phone:</strong> 012-3456789</p>
-</section>
+
+    <br>
+
+    <h3>Send Me a Message</h3>
+
+    <form>
+        <p>
+            <label>Name:</label><br>
+            <input type="text" style="width:100%;padding:10px;">
+        </p>
+
+        <p>
+            <label>Email:</label><br>
+            <input type="email" style="width:100%;padding:10px;">
+        </p>
+
+        <p>
+            <label>Message:</label><br>
+            <textarea rows="5" style="width:100%;padding:10px;"></textarea>
+        </p>
+
+        <button type="submit" style="padding:10px 20px;background:#51db5d;color:white;border:none;border-radius:5px;cursor:pointer;">
+            Send
+        </button>
+    </form>
+</div>
 
 <footer>
     <p>&copy; 2026 Saqinah | My Personal Website</p>
 </footer>
+
+<script>
+function showPage(pageId){
+
+    var pages = document.getElementsByClassName("page");
+
+    for(var i=0; i<pages.length; i++){
+        pages[i].classList.remove("active");
+    }
+
+    document.getElementById(pageId).classList.add("active");
+}
+</script>
 
 </body>
 </html>
