@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mikail Ambition</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+        color: #ff0202;
+    }
+
+    /* HEADER */
+    header {
+        background: #ff0000;
+        color: #fff;
+        padding: 15px 0;
+        text-align: center;
+        border-bottom: 4px solid #800020;
+    }
+
+    header h1 {
+        margin: 0;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        color: #fff;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        color: #800020;
+    }
+
+    /* SECTIONS */
+    section {
+        display: none;
+        padding: 40px;
+        text-align: center;
+    }
+
+    section.active {
+        display: block;
+    }
+
+    h2 {
+        color: #800020;
+    }
+
+    /* GALLERY */
+    .gallery { 
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .gallery img {
+        width: 100%;
+        border: 3px solid #000;
+    }
+
+     <h2>My Gallery</h2>
+
+    <div class="gallery">
+        <img src="image1.jpg" alt="Picture 1">
+        <img src="image2.jpg" alt="Picture 2">
+        <img src="image3.jpg" alt="Picture 3">
+        <img src="image4.jpg" alt="Picture 4">
+    </div>
+
+
+    /* VIDEO */
+    .video-container { song with cool rap vibes
+        margin-top: 20px;
+    }
+
+    iframe {
+        width: 80%;
+        height: 400px;
+        border: 3px solid #000;
+    }
+
+    /* FOOTER */
+    footer {
+        background: #000;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        border-top: 4px solid #800020;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Mikail Ambition</h1>
+    <nav>
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('gallery')">Gallery</a>
+        <a href="#" onclick="showSection('About My Ambition')">About My Ambition</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="active">
+    <h2>Home</h2>
+    <p>Hi! My name is Mikail./p>
+    <p>When I grow up, I want to be a Web Developer! That means I get to be a wizard for the internet.</p>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+        <img src="https://www.2440media.com/sites/default/files/assets/images/blog/The%20Difference%20between%20Web%20Designer%2C%20Web%20Developer%2C%20and%20Web%20Programmer.jpg" alt="Image 1">
+        <img src="https://assets.bitdegree.org/online-learning-platforms/storage/media/2018/08/what-is-a-web-developer.jpg" alt="Image 2">
+        <img src="https://www.liveabout.com/thmb/shPOsLluhIW1qYbRaFRXwglPzGY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/web-developer-job-description-salary-and-skills-2061841_final-edit-01-ac18fd4e99df46e990e4277a821faa0f.jpg" alt="Image 3">
+        <img src="https://media.licdn.com/dms/image/v2/D5612AQGi3Y1YL9JM1w/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1704467555912?e=2147483647&v=beta&t=wGqYYxM0gv__jxUYLyUCY5XSa3-77acHPEwlyCncCX0" alt="Image 4">
+    </div>
+</section>
+
+<section id="About My Ambition">
+    <h2>About My Ambition</h2>
+    <div class="About My Ambition-container">
+        <p>Right now, I spend a lot of time online, but I don't just want to use websites and apps—I want to be the one who actually makes them. I’ve already started looking at how code works, and it’s basically like building with LEGOs, but on a computer screen. You use different languages like HTML to build the skeleton, and CSS to make it look awesome with cool colors, dark modes, and smooth animations.
+            I want to build things that millions of people will click on. Whether it’s a massive gaming forum, an online store, or a portfolio for my friends' art, I want to write the code that brings it to life. Plus, you can do it from anywhere in the world just using a laptop, which is a pretty cool way to make a living."</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 My Portfolio</p>
+</footer>
+
+<script>
+function showSection(sectionId) {
+    const sections = document.querySelectorAll("section");
+    sections.forEach(section => {
+        section.classList.remove("active");
+    });
+
+    document.getElementById(sectionId).classList.add("active");
+}
+</script>
+
+</body>
+</html>
